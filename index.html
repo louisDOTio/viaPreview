@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/semantic.js"></script>
+<script src="/home/aliboba/tiffanyHunt/js/particles.js" charset="utf-8"></script>
+<script src="/home/aliboba/tiffanyHunt/js/app.js" charset="utf-8"></script>
+
+  <link rel="stylesheet" href="/home/aliboba/tiffanyHunt/css/style.css">
+
+  <!---site properties--->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/button.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/dropdown.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/menu.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/grid.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/header.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/site.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/sidebar.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/transition.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/reset.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/container.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/image.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/divider.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/dropdown.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/segment.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/list.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/icon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/sticky.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/accordion.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/modal.min.css" />
+
+
+  <!---end--->
+
+  <script src="/home/aliboba/tiffanyHunt/js/jquery.min.js"></script>
+
+
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/visibility.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/sidebar.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/transition.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/sticky.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/accordion.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.1/components/modal.js"></script>
+  <script>
+    $(document)
+      .ready(function() {
+
+        // fix menu when passed
+        $('.masthead')
+          .visibility({
+            once: false,
+            onBottomPassed: function() {
+              $('.fixed.menu').transition('fade in');
+            },
+            onBottomPassedReverse: function() {
+              $('.fixed.menu').transition('fade out');
+            }
+          });
+
+        // create sidebar and attach to menu open
+        $('.ui.sidebar')
+          .sidebar('attach events', '.toc.item');
+
+
+      })
+
+    ;
+  </script>
+  <script>
+    $(document).ready(function() {
+      $('.ui.styled.accordion')
+        .accordion({
+          title: '.title',
+          trigger: '.title',
+          content: '.content'
+        })
+    });
+  </script>
+
+  <style type="text/css">
+    .hidden.menu {
+      display: none;
+    }
+
+    .masthead.segment {
+      min-height: 700px;
+      padding: 1em 0em;
+    }
+
+    .masthead .logo.item img {
+      margin-right: 1em;
+    }
+
+    .masthead .ui.menu .ui.button {
+      margin-left: 0.5em;
+    }
+
+    .masthead h1.ui.header {
+      margin-top: 3em;
+      margin-bottom: 0em;
+      font-size: 4em;
+      font-weight: normal;
+    }
+
+    .masthead h2 {
+      font-size: 1.7em;
+      font-weight: normal;
+    }
+
+    .ui.vertical.stripe {
+      padding: 8em 0em;
+    }
+
+    .ui.vertical.stripe h3 {
+      font-size: 2em;
+    }
+
+    .ui.vertical.stripe .button+h3,
+    .ui.vertical.stripe p+h3 {
+      margin-top: 3em;
+    }
+
+    .ui.vertical.stripe .floated.image {
+      clear: both;
+    }
+
+    .ui.vertical.stripe p {
+      font-size: 1.33em;
+    }
+
+    .ui.vertical.stripe .horizontal.divider {
+      margin: 3em 0em;
+    }
+
+    .quote.stripe.segment {
+      padding: 0em;
+    }
+
+    .quote.stripe.segment .grid .column {
+      padding-top: 5em;
+      padding-bottom: 5em;
+    }
+
+    .footer.segment {
+      padding: 5em 0em;
+    }
+
+    .secondary.pointing.menu .toc.item {
+      display: none;
+    }
+
+    @media only screen and (max-width: 700px) {
+      .ui.fixed.menu {
+        display: none !important;
+      }
+      .secondary.pointing.menu .item,
+      .secondary.pointing.menu .menu {
+        display: none;
+      }
+      .secondary.pointing.menu .toc.item {
+        display: block;
+      }
+      .masthead.segment {
+        min-height: 350px;
+      }
+      .masthead h1.ui.header {
+        font-size: 2em;
+        margin-top: 1.5em;
+      }
+      .masthead h2 {
+        margin-top: 0.5em;
+        font-size: 1.5em;
+      }
+    }
+  </style>
+
+  <title>viaSolutions</title>
+
+</head>
+
+<body>
+  <!-- Following Menu -->
+  <div class="ui large top fixed hidden menu">
+    <div class="ui container">
+      <a class="active item" href="#home">Home</a>
+      <a class="item" href="#services">About Us</a>
+      <a class="item">Services</a>
+      <a class="item">Blog</a>
+      <a class="item">Contact</a>
+      <div class="right menu">
+
+        <div class="item">
+          <a class="ui custom black basic button">Social Media</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sidebar Menu -->
+  <div class="ui vertical inverted sidebar menu">
+    <a class="active item">Home</a>
+    <a class="item">About Us</a>
+    <a class="item">Services</a>
+    <a class="item">Blog</a>
+    <a class="item">Contact</a>
+  </div>
+
+
+  <!-- Page Contents -->
+  <div class="pusher">
+    <div class="ui inverted vertical masthead center aligned segment" id="particles-js">
+      <canvas class="particles-js-canvas-el" width="1903" height="952" style="width: 100%;height: 100%;position: absolute;top: 0;left: 0;"></canvas>
+      <div class="ui container">
+        <div class="ui big secondary inverted borderless pointing menu" id="menu">
+          <a class="toc item">
+            <i class="sidebar icon"></i>
+          </a>
+          <a class="active item">Home</a>
+          <a class="item">About Us</a>
+          <a class="item">Services</a>
+          <a class="item">Blog</a>
+          <a class="item">Contact</a>
+          <div class="middle item" style="margin-left:90px;">
+
+            <img class="ui tiny circular image" src="/home/aliboba/tiffanyHunt/img/VSP_Logo.jpg">
+
+          </div>
+          <div class="right item">
+            <a class="ui inverted custom button">Social Media</a>
+            <div class="ui custom popup top left transition hidden">
+              I'm not on the same level as the button, but i can still be found.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ui text container" id="test">
+        <h1 class="ui inverted header">
+          viaSolutions LLC
+        </h1>
+        <h2 class="display-4" style="font-style:italic;">Providing high-quality , focused ITSM solutions</h2>
+        <div class="ui animated huge inverted black button " style="margin-top:80px;">
+          <div class="visible content" id="mainButton">Learn More</div>
+          <div class="hidden content">
+            <i class="down arrow icon" style="color:white!important;"></i>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="ui vertical stripe segment" id="#services">
+      <div class="ui middle aligned stackable grid container">
+        <div class="row">
+          <div class="eight wide column">
+            <h3 class="ui header">We Help Companies</h3>
+            <p class="lead">We believe in empowering our clients with the knowledge to make informed decisions. Have a small improvement project that you don’t have the resources to address? We can help! Looking to achieve a CMMI maturity level? We can facilitate the
+              whole process! Need to learn a new skill to support your ITSM program? We have the perfect solution! </p>
+            <h3 class="ui header">What services do we provide?</h3>
+            <p class="lead">We provide consulting in support of ITSM programs to include business process improvement implementations, CMMI and ISO preparation, and CMMI appraisal support. </p>
+            <a class="ui large button">Read More</a>
+          </div>
+          <div class="eight wide right floated column">
+            <img src="/home/aliboba/tiffanyHunt/img/pexels-photo-515167.jpg" class="ui huge rounded image">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="ui raised inverted very padded segment" id="certs">
+      <h1 class="ui huge left aligned dividing inverted grey header">Training</h1>
+<br>
+<br>
+<br>
+      <div class="ui styled accordion">
+        <div class=" title">
+          <i class="dropdown icon"></i>
+          <img class="ui tiny centered image" src="/home/aliboba/tiffanyHunt/img/itil_0.png">
+        </div>
+        <div class="content">
+          <p class="lead text-center">An entry level certification which offers you a general awareness of the key elements, concepts and terminology used in the ITIL service lifecycle, including the links between lifecycle stages, the processes used and their contribution to service
+            management practices.</p>
+        </div>
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <img class="ui tiny centered image" src="/home/aliboba/tiffanyHunt/img/images.jpeg">
+        </div>
+        <div class="content">
+          <p class="lead text-center"> Scrum is a methodology that allows a team to self-organize and make changes quickly, in accordance with agile principles. We offer comprehensive training to help you improve in the profession of software delivery</p>
+        </div>
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <img class="ui tiny centered image" src="/home/aliboba/tiffanyHunt/img/devops.png">
+        </div>
+        <div class="content">
+          <p class="lead text-center">We provide an introduction to DevOps, the cultural and professional movement that stresses communication, collaboration, integration, and automation in order to improve the flow of work between software developers and IT operations professionals.</p>
+
+        </div>
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <img class="ui tiny centered image" src="/home/aliboba/tiffanyHunt/img/COBIT-5-Logo.jpg" style="margin-top:15px;">
+
+        </div>
+        <div class="content">
+          <p class="lead text-center">We offer COBIT 5 training which helps maximize the value of information by incorporating the latest thinking in enterprise governance and management techniques, and provides globally accepted principles, practices, analytical tools and models
+            to help increase the trust in, and value from, information systems.</p>
+
+        </div>
+
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <img class="ui small centered image" src="/home/aliboba/tiffanyHunt/img/leanIT.png">
+
+        </div>
+        <div class="content">
+          <p class="lead text-center">We offer the Lean IT foundation certification to help IT organizations to ensure that they provide their customers with the best possible services. Through understanding customer value, the processes that deliver this value, the way to manage
+            performance and the way to organize and the required attitude and behaviour.</p>
+        </div>
+
+        <div class="title">
+          <i class="dropdown icon"></i>
+          <img class="ui tiny centered image" src="/home/aliboba/tiffanyHunt/img/iso.png">
+        </div>
+        <div class="content">
+          <p class="lead text-center">We offer training in the ISO 9000 family of quality management systems.Which are standards designed to help organizations ensure that they meet the needs of customers and other stakeholders while meeting statutory and regulatory requirements
+            related to a product or service.</p>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+      <h4 class="ui horizontal header divider"></h4>
+      <table class="ui inverted grey celled table">
+        <thead>
+          <tr>
+            <th class="ui centered header" colspan="3">ITIL Training</th>
+          </tr>
+          <tr>
+            <th>General</th>
+            <th>Capability Stream</th>
+            <th>Consulting</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="selectable">
+              <a href="#" id="test">ITIL Foundation  in IT Service Management</a>
+
+            </td>
+            <td class="selectable">
+              <a href="#">Service Offerings and Agreements (SOA)</a>
+            </td>
+            <td class="selectable">
+              <a href="#">Capability Maturity Model Intergration (CMMI)</a>
+            </td>
+
+          </tr>
+          <tr>
+            <td class="selectable"><a href="#">Life Cycle Stream</a></td>
+            <td class="selectable"><a href="#">Operational Support and Analysis (OSA)</a></td>
+            <td class="selectable"><a href="#">CMMI Gap Analysis</a></td>
+          </tr>
+          <tr>
+            <td class="selectable"><a href="#">Service Design (SD)</a></td>
+            <td class="selectable"><a href="#">Release Control and Validation (RCV)</a></td>
+            <td class="selectable"><a href="#">CMMI PIID Review</a> </td>
+          </tr>
+          <tr>
+            <td class="selectable"><a href="#">Service Transition (ST)</a></td>
+            <td class="selectable"><a href="#">Planning Protection and Optimization (PPO)</a></td>
+            <td class="selectable"><a href="#">International Organization for Standardization (ISO)</a></td>
+          </tr>
+          <tr>
+            <td class="selectable"><a href="#">Service Operations (SO)</a></td>
+            <td></td>
+            <td class="selectable"><a href="#">Qualified CMMI Appraisal Team Member</a></td>
+          </tr>
+          <tr>
+            <td class="selectable"><a href="#">Continual Service Improvement (CSI)</a></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+        <tfoot class="full-width">
+          <tr>
+            <th></th>
+            <th colspan="4">
+              <div class="ui right floated small secondary labeled icon button">
+                <i class="large hand point up icon"></i> Click to view information
+              </div>
+
+            </th>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+
+    <!-- /.row -->
+
+
+
+
+
+
+
+
+    <div class="ui vertical stripe segment">
+      <div class="ui left aligned text container">
+        <h3 class="ui large header">A proven track record</h3>
+        <h4 class="ui medium header"> Some of our clients include:</h4>
+        <ul class="ui big divided list">
+          <li>U.S. Department of Transportation (DOT)</li>
+          <li>U.S. Department of Homeland Security (DHS)</li>
+          <li>U.S. Department of Agriculture (USDA)</li>
+          <li>Redstone Learning</li>
+          <li>Sprintzeal</li>
+          <li>Global Knowledge</li>
+          <li>Acme Process Group</li>
+
+        </ul>
+
+        <h4 class="ui horizontal header divider">
+          <a href="#">Past performance and former clients</a>
+        </h4>
+        <h3 class="ui header">How did we help?</h3>
+        <ul class="ui big divided list">
+          <li>Prepared numerous organizations for ML2-3 CMMI-DEV and CMMI-SVC appraisals</li>
+          <li>Successfully taught ITIL courses with 100% pass rating</li>
+          <li>Identified reporting mechanism for DHS HQ OCSO </li>
+          <li>Integrated CMMI ML 3 process areas for ESSD at DHS</li>
+          <li>Implemented a repeatable set of processes for DHS service desk</li>
+          <li>Released customer satisfaction tool</li>
+          <li>Upgraded and configured SharePoint tool to support new change management process</li>
+
+        </ul>
+        <a class="ui large centered button">Awards/Accolades</a>
+      </div>
+    </div>
+
+
+    <div class="row mb-2 ui inverted segment">
+      <div class="col-md-4">
+        <div class="card text-white bg-dark flex-md-row mb-4 box-shadow h-md-250">
+          <div class="card-body d-flex flex-column align-items-start">
+            <strong class="d-inline-block mb-2 text-primary">World</strong>
+            <h3 class="mb-0">
+                    <a class="text-dark" href="#">Featured post</a>
+                  </h3>
+            <div class="mb-1 text-muted">Nov 12</div>
+            <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+            <a href="#">Continue reading</a>
+          </div>
+          <img class="card-img-right flex-auto d-none d-md-block" src="/home/aliboba/tiffanyHunt/img/download (1).png" alt="Card image cap">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card text-white bg-dark flex-md-row mb-4 box-shadow h-md-250">
+          <div class="card-body d-flex flex-column align-items-start">
+            <strong class="d-inline-block mb-2 text-success">Design</strong>
+            <h3 class="mb-0">
+                    <a class="text-dark" href="#">Post title</a>
+                  </h3>
+            <div class="mb-1 text-muted">Nov 11</div>
+            <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+            <a href="#">Continue reading</a>
+          </div>
+          <img class="card-img-right flex-auto d-none d-md-block" src="/home/aliboba/tiffanyHunt/img/download (1).png" alt="Card image cap">
+        </div>
+      </div>
+      <aside class="col-md-4 blog-sidebar">
+        <div class="p-3 mb-3 bg-dark rounded">
+          <h4 class="font-italic">About</h4>
+          <p class="mb-0">Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+        </div>
+
+        <div class="p-3">
+          <h4 class="font-italic">Archives</h4>
+          <ol class="list-unstyled mb-0">
+            <li><a href="#">March 2014</a></li>
+            <li><a href="#">February 2014</a></li>
+            <li><a href="#">January 2014</a></li>
+            <li><a href="#">December 2013</a></li>
+            <li><a href="#">November 2013</a></li>
+            <li><a href="#">October 2013</a></li>
+            <li><a href="#">September 2013</a></li>
+            <li><a href="#">August 2013</a></li>
+            <li><a href="#">July 2013</a></li>
+            <li><a href="#">June 2013</a></li>
+            <li><a href="#">May 2013</a></li>
+            <li><a href="#">April 2013</a></li>
+          </ol>
+        </div>
+
+        <div class="p-3">
+          <h4 class="font-italic">Elsewhere</h4>
+          <ol class="list-unstyled">
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ol>
+        </div>
+      </aside>
+      <!-- /.blog-sidebar -->
+
+    </div>
+
+
+    <div class="ui  vertical footer segment">
+      <div class="ui container">
+        <div class="ui stackable divided equal height stackable grid">
+          <div class="three wide column">
+            <h4 class="ui header">About</h4>
+            <div class="ui link list">
+              <a href="#" class="item">Sitemap</a>
+              <a href="#" class="item">Contact Us</a>
+              <a href="#" class="item">Religious Ceremonies</a>
+              <a href="#" class="item">Gazebo Plans</a>
+            </div>
+          </div>
+          <div class="three wide column">
+            <h4 class="ui header">Services</h4>
+            <div class="ui  link list">
+              <a href="#" class="item">Banana Pre-Order</a>
+              <a href="#" class="item">DNA FAQ</a>
+              <a href="#" class="item">How To Access</a>
+              <a href="#" class="item">Favorite X-Men</a>
+            </div>
+          </div>
+          <div class="seven wide column">
+            <h4 class="ui  header">Footer Header</h4>
+            <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Optional JavaScript -->
+
+  <script>
+    particlesJS.load('particles-js',
+      'particles.json',
+      function() {
+        console.log('particles.json loaded...')
+      });
+  </script>
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
